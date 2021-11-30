@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Погодное приложение</string>
+    <string name="choose_city">ВЫБЕРИТЕ ГОРОД ИЗ СПИСКА</string>
+    <string name="share">Поделиться с другом</string>
+    <string name="repeat_choose_city">ПОВТОРИТЕ ВЫБОР ГОРОДА</string>
+    <string name="checkbox_pressure">Давление</string>
+    <string name="checkbox_feels">Ощущается как</string>
+    <string name="checkbox_humidity">Влажность</string>
+    <string name="text_holder">Здесь появится прогноз</string>
+
+    <string name="nav_header_title">Погода</string>
+    <string name="nav_header_subtitle">Email</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="choose_city_for_land">ВЫБЕРИТЕ ГОРОД</string>
+    <string name="first_button">Первая кнопка</string>
+    <string name="second_button">Вторая кнопка</string>
+    <string name="third_button">Третья кнопка</string>
+    <string name="open_popup">Открыть popup</string>
+    <string name="context_menu_hide">Скрыть изображение</string>
+    <string name="context_menu_show_background">Показать фон</string>
+    <string name="context_menu_delete_background">Удалить фон</string>
+    <string name="main_fragment">Основное приложение</string>
+    <string name="hello_blank_fragment">Фрагмент для NVtest</string>
+    <string name="fragment_for_n_v">FragmentForNV</string>
+    <string name="celsius">\ ℃, \</string>
+    <string name="mm_hg">\ мм рт. ст.\</string>
+    <string name="percent">\ %\</string>
+    <string name="humidity">\Влажность: \</string>
+    <string name="language">ru</string>
+    <string name="for_wind">\ м/с, \</string>
+    <string name="for_wind_beggining">\Ветер: \</string>
+    <string name="for_feels_beggining">\Ощущается как: \</string>
+    <string name="button_save">Сохранить</string>
+    <string name="button_load">Загрузить</string>
+    <string name="button_delete">Удалить</string>
+    <string name="toast_external_storage_not_found">Внешнее хранилище не найдено</string>
+    <string name="toast_file_deleted">Файл удалён</string>
+    <string name="toast_file_not_exist">Файл не существует</string>
+    <string name="show_image_from_internet">ПОКАЗАТЬ КАРТИНКУ ИЗ ИНТЕРНЕТА</string>
+    <string name="city_add_layout">Город</string>
+    <string name="city_for_gson_add_layout">Название города для GSON</string>
+    <string name="delete_main_context_menu">Удалить город</string>
+    <string name="edit_main_context_menu">Редактировать</string>
+    <string name="main_menu_add_a_note">Добавить город</string>
+    <string name="main_menu_clear_all">Очистить список городов</string>
+    <string name="alert_cancel">Отмена</string>
+    <string name="alert_title_add">Внесите данные о городе</string>
+    <string name="menu_add">Добавить город</string>
+    <string name="now_in">Сейчас в городе \"</string>
+    <string name="refresh_the_note">Обновить запись</string>
+    <string name="it_was">\ было</string>
+    <string name="at">\ в \</string>
+    <string name="Close">Закрыть</string>
+    <string name="delete_this_note">Удалить эту запись</string>
+    <string name="delete_all_history">Удалить всю историю</string>
+
+    <string-array name="cityes_selection">
+        <item>Хабаровск</item>
+        <item>Санкт-Петербург</item>
+        <item>Москва</item>
+    </string-array>
+
+
+</resources>

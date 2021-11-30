@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Weather application</string>
+    <string name="choose_city">CHOOSE A CITY FROM THE LIST</string>
+    <string name="share">Share with a friend</string>
+    <string name="repeat_choose_city">REPEAT CITY CHOICE</string>
+    <string name="checkbox_pressure">Pressure</string>
+    <string name="checkbox_feels">Feels like</string>
+    <string name="checkbox_humidity">Humidity</string>
+    <string name="text_holder">The forecast will appear here</string>
+
+    <string name="nav_header_title">Wheater</string>
+    <string name="nav_header_subtitle">Email</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string-array name="cityes_selection">
+        <item>Khabarovsk</item>
+        <item>St. Petersburg</item>
+        <item>Moscow</item>
+    </string-array>
+
+    <string-array name="pressure">
+        <item>Pressure in Khabarovsk</item>
+        <item>Pressure in St. Petersburg</item>
+        <item>Pressure in Moscow</item>
+    </string-array>
+
+    <string-array name="tomorrow">
+        <item>Tomorrow in Khabarovsk</item>
+        <item>Tomorrow in St. Petersburg</item>
+        <item>Tomorrow in Moscow</item>
+    </string-array>
+
+    <string-array name="week">
+        <item>the Week in Khabarovsk</item>
+        <item>the Week in St. Petersburg</item>
+        <item>the Week in Moscow</item>
+    </string-array>
+
+    <string name="choose_city_for_land">CHOOSE CITY</string>
+    <string name="first_button">First button</string>
+    <string name="second_button">Second button</string>
+    <string name="third_button">Third button</string>
+    <string name="open_popup">open popup</string>
+    <string name="context_menu_hide">hide image</string>
+    <string name="context_menu_show_background">show background</string>
+    <string name="context_menu_delete_background">delete background</string>
+    <string name="main_fragment">Main application</string>
+    <string name="hello_blank_fragment">Fragment for NVtest</string>
+    <string name="fragment_for_n_v">FragmentForNV</string>
+    <string name="celsius">\ ℃, \</string>
+    <string name="mm_hg">\ мм рт. ст.\</string>
+    <string name="percent">\ %\</string>
+    <string name="humidity">\Влажность: \</string>
+    <string name="language">en</string>
+    <string name="for_wind">\ м/с, \</string>
+    <string name="for_wind_beggining">\Wind: \</string>
+    <string name="for_feels_beggining">\Feels like: \</string>
+    <string name="button_save">Save</string>
+    <string name="button_load">Load</string>
+    <string name="button_delete">Delete</string>
+    <string name="toast_external_storage_not_found">External storage is not found</string>
+    <string name="toast_file_deleted">File is deleted</string>
+    <string name="toast_file_not_exist">File is not exist</string>
+    <string name="show_image_from_internet">SHOW IMAGE FROM INTERNET</string>
+    <string name="city_add_layout">City</string>
+    <string name="city_for_gson_add_layout">City for GSON</string>
+    <string name="delete_main_context_menu">Delete</string>
+    <string name="edit_main_context_menu">Edit</string>
+    <string name="main_menu_add_a_note">Add a note</string>
+    <string name="main_menu_clear_all">Clear all</string>
+    <string name="alert_cancel">Cancel</string>
+    <string name="alert_title_add">Enter information about the city</string>
+    <string name="menu_add">Add a City</string>
+    <string name="now_in">Now in \"</string>
+    <string name="refresh_the_note">Refresh the Note</string>
+    <string name="it_was">\ it was</string>
+    <string name="at">\ at \</string>
+    <string name="Close">Close</string>
+    <string name="delete_this_note">Delete this note</string>
+    <string name="delete_all_history">Delete all history</string>
+
+    <string-array name="city_names_for_load_weather">
+        <item>Khabarovsk,ru</item>
+        <item>Saint Petersburg,ru</item>
+        <item>Moscow,ru</item>
+    </string-array>
+
+
+</resources>
