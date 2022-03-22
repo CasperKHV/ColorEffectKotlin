@@ -6,17 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.PopupMenu
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.util.Date
+import java.util.*
 
 class CitiesListFragment : Fragment() {
 
@@ -204,7 +199,7 @@ class CitiesListFragment : Fragment() {
                     return
                 }
                 val cityForBundle = weather!!.name
-                val resultWeather = WeatherSpec.getWeather(activity, categoryId, weather)
+                val resultWeather = WeatherSpec.getWeather(activity, weather)
                 val resultWeatherHistory = WeatherSpec.getWeatherHistory(activity, weather, currentDate)
                 val dateForHistory = WeatherSpec.getDate(activity, currentDate)
                 if (checkBoxPressure!!.isChecked) {
@@ -227,7 +222,6 @@ class CitiesListFragment : Fragment() {
                     dateForHistory,
                     resultWeatherHistory,
                     iconCode,
-                    categoryId,
                     cityForBundle
                 )
                 citiesListListener!!.onListItemClick(categoryId, dataForBundle, descriptionText)

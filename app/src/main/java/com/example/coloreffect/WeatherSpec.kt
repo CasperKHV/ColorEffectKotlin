@@ -8,7 +8,7 @@ import java.util.Locale
 
 internal object WeatherSpec {
 
-    fun getWeather(context: Context?, position: Int, weather: ModelForGSONWeatherClass): String {
+    fun getWeather(context: Context?, weather: ModelForGSONWeatherClass): String {
         return """
                ${context!!.getString(R.string.now_in)}${weather.name}": ${weather.main!!.temp}${context.getString(R.string.celsius)}
                ${context.getString(R.string.for_wind_beggining)}${weather.wind!!.speed}${context.getString(R.string.for_wind)}

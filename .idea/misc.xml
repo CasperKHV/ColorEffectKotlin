@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Kirill/AndroidStudioProjects/WeatherProjectAndroidStudio-migration_to_kotlin/app/src/main/res/layout-land/fragment_weather_result.xml" value="0.17372134038800705" />
+        <entry key="..\:/Users/Kirill/AndroidStudioProjects/WeatherProjectAndroidStudio-migration_to_kotlin/app/src/main/res/layout/fragment_weather_result.xml" value="0.2015625" />
+      </map>
+    </option>
+  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />
     <option name="myDefaultNotNull" value="androidx.annotation.NonNull" />

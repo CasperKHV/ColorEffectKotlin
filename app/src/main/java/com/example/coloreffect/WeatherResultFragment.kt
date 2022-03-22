@@ -1,6 +1,7 @@
 package com.example.coloreffect
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.res.Resources.NotFoundException
 import android.graphics.Color
@@ -23,7 +24,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.coloreffect.CheckBoxWeatherResultFragment
 import com.example.coloreffect.CitiesListFragment
+import okhttp3.internal.wait
 import java.io.Serializable
+import java.util.concurrent.TimeUnit
 
 class WeatherResultFragment : Fragment(), View.OnClickListener {
 
@@ -38,11 +41,15 @@ class WeatherResultFragment : Fragment(), View.OnClickListener {
     var city: String? = null
     var history: String? = null
     var dateForHistory: String? = null
-    private var dataForBundle: DataForBundle? = null
+    public var dataForBundle: DataForBundle? = null
     private var weatherText: TextView? = null
     private var shareButton: Button? = null
+    private var updateButton: Button? = null
     private var message: String? = null
     private var photoWeather: ImageView? = null
+
+    private var forTransferResult:ForTransferResult? = null
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_weather_result, container, false)
         noteDataSourceForHistory = NoteDataSourceForHistory(activity)
@@ -58,8 +65,41 @@ class WeatherResultFragment : Fragment(), View.OnClickListener {
         photoWeather = view.findViewById(R.id.photoWeather)
         weatherText = view.findViewById(R.id.textview_weather)
         shareButton = view.findViewById(R.id.button_share)
+        updateButton = view.findViewById(R.id.button_update)
+        updateButton?.setVisibility(View.VISIBLE)//сделать надо в ресах видимость
         shareButton!!.setOnClickListener(this)
+        updateButton!!.setOnClickListener(this)
+        setVisibleButtonUpdate()
         return view
+    }
+
+    internal interface ForTransferResult{
+        fun transferResult()
+    }
+
+    fun setVisibleButtonUpdate(){
+        val thread: Thread = object : Thread() {
+            override fun run() {
+                while (true){
+                    TimeUnit.MINUTES.sleep(15)
+                    updateButton?.setBackgroundColor(Color.GREEN)
+                }
+
+
+            }
+        }
+        thread.start()
+    }
+
+    override fun onAttach(context: Context) {
+        forTransferResult = try {
+            context as ForTransferResult
+        } catch (e: ClassCastException) {
+            throw IllegalArgumentException("$context must implement ForTransferResult")
+        } catch (e: NullPointerException) {
+            throw IllegalArgumentException("$context must implement ForTransferResult")
+        }
+        super.onAttach(context)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -67,6 +107,11 @@ class WeatherResultFragment : Fragment(), View.OnClickListener {
         if (savedInstanceState != null) {
             dataForBundle = savedInstanceState.getSerializable(DATA_FOR_BUNDLE) as DataForBundle?
         }
+        dataExtraction()
+
+    }
+
+    fun dataExtraction(){
         val photoWeatherCode: String?
         if (dataForBundle != null) {
             message = dataForBundle!!.message
@@ -163,6 +208,8 @@ class WeatherResultFragment : Fragment(), View.OnClickListener {
             } else {
                 shareButton!!.setBackgroundColor(Color.RED)
             }
+        } else if (v.id == R.id.button_update&&forTransferResult!=null){
+            forTransferResult!!.transferResult()
         }
     }
 

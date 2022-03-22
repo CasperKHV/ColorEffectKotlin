@@ -10,7 +10,6 @@ class DataForBundle(
     var dateForHistory: String?,
     var history: String?,
     var iconCode: String?,
-    var photoWeather: Int,
     var city: String?
 ) : Serializable {
 
